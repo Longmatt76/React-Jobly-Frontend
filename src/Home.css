@@ -1,0 +1,35 @@
+h1 {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 3px 3px 3px black;
+    margin-bottom: 0;
+
+}
+
+p {
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+button {
+    margin: 5px;
+    padding: 6px;
+    background-color: rgb(26, 45, 144);
+    border: 1px solid darkgray;
+    color: white;
+    font-size: large;
+    border-radius: 10%;
+}
+
+button:hover {
+    cursor: pointer;
+}

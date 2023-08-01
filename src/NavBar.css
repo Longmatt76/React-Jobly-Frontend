@@ -1,0 +1,28 @@
+nav {
+  background-color: rgb(15, 28, 91);
+  padding: 10px;
+}
+
+
+nav a  {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.541);
+}
+
+nav a.active {
+  color: white;
+}
+
+.links {
+  display: inline-block;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.links a {
+  margin: 10px;
+}
+
+#title {
+  font-size: 2rem;
+}
