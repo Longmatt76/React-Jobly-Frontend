@@ -1,10 +1,16 @@
-import './Job.css';
+import "./Job.css";
 
-const Job = () => {
-    return (
-        <>
-        </>
-    )
-}
+const Job = ({ title, salary, equity}) => {
+  return (
+    <>
+      <div className="jobCard">
+        <h4 className="jobCardTitle">Job Title: {title}</h4>
+        <p className="jobCardSalary">Salary: {salary}</p>
+        <p className="jobCardEquity">Equity: {equity}</p>
+        <button className="jobCardButton">Apply</button>
+      </div>
+    </>
+  );
+};
 
-export default Job; 
+export default Job;

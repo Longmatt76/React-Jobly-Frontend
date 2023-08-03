@@ -1,0 +1,20 @@
+.companyCard {
+    background-color: rgb(242, 241, 241);
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 800px;
+    height: 160px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.companyP {
+    color: black;
+    text-shadow: none;
+}
+
+.companyCard a{
+    color: rgb(27, 50, 165);
+}

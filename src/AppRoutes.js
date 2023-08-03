@@ -7,6 +7,8 @@ import Signup from "./Signup";
 import CompanyList from "./CompanyList";
 import JobList from "./JobList";
 import Profile from "./Profile";
+import CatchAll404 from "./CatchAll404";
+import CompanyDetails from "./CompanyDetails";
 
 function AppRoutes() {
   return (
@@ -15,8 +17,10 @@ function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/companies" element={<CompanyList />} />
+      <Route path="/companies/:handle" element={<CompanyDetails/>}/>
       <Route path="/jobs" element={<JobList />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="*" element={<CatchAll404/>} /> 
     </Routes>
   );
 }
