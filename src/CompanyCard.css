@@ -13,8 +13,20 @@
 .companyP {
     color: black;
     text-shadow: none;
+    font-style: italic;
+    font-size: smaller;
+    background-color: rgb(208, 208, 208);
+    padding: 10px;
+    border: 1px solid darkblue;
+    border-radius: 5px;
 }
 
 .companyCard a{
     color: rgb(27, 50, 165);
+    margin-bottom: 0;
+}
+
+.companyCardH5 {
+    margin-top: 0;
+    margin-left: 5px;
 }

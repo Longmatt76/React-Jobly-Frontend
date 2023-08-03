@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import JoblyApi from "./api";
 import { useParams } from "react-router-dom";
 import Loading from "./Loading";
-import Job from "./Job";
+import JobCard from "./JobCard";
 
 const CompanyDetails = () => {
   const { handle } = useParams();
@@ -29,7 +29,7 @@ const CompanyDetails = () => {
       <ul>
         {company.jobs.map((job) => (
           <li key={job.id}>
-            <Job
+            <JobCard
               title={job.title}
               salary={job.salary}
               equity={job.equity}

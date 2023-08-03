@@ -1,4 +1,4 @@
-import Company from "./Company";
+import CompanyCard from "./CompanyCard";
 import SearchForm from "./SearchForm";
 import "./CompanyList.css";
 import React, { useState, useEffect } from "react";
@@ -10,10 +10,10 @@ const CompanyList = () => {
   const [companies, setCompanies] = useState();
 
   useEffect(function getCompaniesOnMount() {
-    search();
+    searchCompanies();
   }, []);
 
-  async function search(name) {
+  async function searchCompanies(name) {
     let companies = await JoblyApi.getCompanies(name || null);
     setCompanies(companies);
   }
@@ -22,16 +22,17 @@ const CompanyList = () => {
 
   return (
     <>
-      <SearchForm search={search} />
+      <SearchForm search={searchCompanies} />
       {companies.length ? (
         companies.map((c) => {
           return (
-            <Company
+            <CompanyCard
               key={c.handle}
               handle={c.handle}
               name={c.name}
               description={c.description}
               logoUrl={c.logoUrl}
+              numEmployees={c.numEmployees}
             />
           );
         })

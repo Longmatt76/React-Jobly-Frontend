@@ -1,6 +1,6 @@
-import "./Job.css";
+import "./JobCard.css";
 
-const Job = ({ title, salary, equity}) => {
+const JobCard = ({ title, salary, equity}) => {
   return (
     <>
       <div className="jobCard">
@@ -13,4 +13,4 @@ const Job = ({ title, salary, equity}) => {
   );
 };
 
-export default Job;
+export default JobCard;
