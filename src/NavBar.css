@@ -1,7 +1,10 @@
 nav {
   background-color: rgb(15, 28, 91);
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
 }
+
 
 
 nav a  {
@@ -14,7 +17,7 @@ nav a.active {
 }
 
 .links {
-  display: inline-block;
+  align-content: flex-start;
   margin-right: auto;
   padding: 10px;
 }
@@ -25,4 +28,30 @@ nav a.active {
 
 #title {
   font-size: 2rem;
+  margin-top: -5px;
+  margin-left: 10px;
+}
+
+.linkDiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.authLinks {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.authLinks a{
+  padding: 5px;
+}
+
+.logout {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 15px;
 }

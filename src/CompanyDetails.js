@@ -8,15 +8,16 @@ const CompanyDetails = () => {
   const { handle } = useParams();
   const [company, setCompany] = useState();
 
-  async function getCompanyAndJobs(handle) {
-    let company = await JoblyApi.getCompany(handle);
-    setCompany(company);
-    console.log(company);
-  }
+  useEffect(
+    function getCompanyAndJobs() {
+      async function getCompany() {
+        setCompany(await JoblyApi.getCompany(handle));
+      }
+      getCompany();
+    },
+    [handle]
+  );
 
-  useEffect(() => {
-    getCompanyAndJobs(handle);
-  }, [handle]);
 
   if (!company) {
     return <Loading />;

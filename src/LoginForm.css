@@ -1,0 +1,42 @@
+.loginForm {
+    background-color: rgb(231, 230, 230);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid darkblue;
+    border-radius: 5px;
+}
+
+.loginFormH3 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.loginInput {
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    border: .5px solid black;
+    margin-bottom: 10px;
+}
+
+.loginLabel {
+     color: black;
+     margin-right: 320px;
+     margin-bottom: 5px;
+     font-weight: 500;
+}
+
+.loginButton {
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.loginLabelEmail {
+    margin-right: 360px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}

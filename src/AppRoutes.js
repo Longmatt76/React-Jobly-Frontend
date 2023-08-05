@@ -10,12 +10,12 @@ import Profile from "./Profile";
 import CatchAll404 from "./CatchAll404";
 import CompanyDetails from "./CompanyDetails";
 
-function AppRoutes() {
+function AppRoutes({handleLogIn, handleSignUp, getUserInfo}) {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/login" element={<LoginForm />} />
-      <Route path="/signup" element={<SignUpForm />} />
+      <Route path="/login" element={<LoginForm handleLogIn={handleLogIn}/>} />
+      <Route path="/signup" element={<SignUpForm  handleSignUp={handleSignUp}/>} />
       <Route path="/companies" element={<CompanyList />} />
       <Route path="/companies/:handle" element={<CompanyDetails/>}/>
       <Route path="/jobs" element={<JobList />} />
