@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState} from "react";
+import { useNavigate, Link } from "react-router-dom";
 
 const SignUpForm = ({handleSignUp}) => {
 
@@ -86,6 +86,7 @@ const SignUpForm = ({handleSignUp}) => {
         />
         <button className="loginButton">Submit</button>
       </form>
+      <h4 className="signUpLink">Already a member? Login <Link to="/login">here</Link></h4>
     </div>
   );
 };

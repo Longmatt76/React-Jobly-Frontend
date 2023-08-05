@@ -11,6 +11,8 @@ p {
     text-align: center;
     color: white;
     text-shadow: 1px 1px 1px black;
+    font-style: italic;
+    font-size: larger;
 }
 
 .home {
@@ -32,4 +34,11 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+.welcomeBack {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-size: 2rem;
+    margin-top: 0;
 }

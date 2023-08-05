@@ -6,12 +6,13 @@ import AppRoutes from "./AppRoutes";
 import JoblyApi from "./api";
 import jwt from 'jsonwebtoken';
 import UserContext from "./UserContext";
+import useLocalStorage from "./hooks/useLocalStorage";
 
 
 
 function App() {
 
-  const [token, setToken] = useState();
+  const [token, setToken] = useLocalStorage('token');
   const [currentUser, setCurrentUser] = useState();
   
 

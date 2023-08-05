@@ -1,6 +1,6 @@
 import "./LoginForm.css";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const LoginForm = ({handleLogIn}) => {
 
@@ -51,6 +51,7 @@ const handleSubmit = async (e) => {
         />
         <button type="submit" className="loginButton">Submit</button>
       </form>
+      <h4 className="signUpLink">Not yet a member? sign up <Link to="/signup">here</Link> </h4>
     </div>
   );
 };
