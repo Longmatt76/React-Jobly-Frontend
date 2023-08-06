@@ -4,7 +4,7 @@ import "./JobList.css";
 import React, { useEffect, useState } from "react";
 import JoblyApi from "./api";
 
-const JobList = () => {
+const JobList = ({apply}) => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(function getJobsOnMount() {
@@ -24,7 +24,7 @@ const JobList = () => {
           jobs.map((j) => {
             return (
               <li key={j.id}>
-                <JobCard title={j.title} salary={j.salary} equity={j.equity} />
+                <JobCard apply={apply} title={j.title} salary={j.salary} equity={j.equity} id={j.id} />
               </li>
             );
           })

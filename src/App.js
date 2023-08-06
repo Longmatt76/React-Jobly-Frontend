@@ -14,6 +14,7 @@ function App() {
 
   const [token, setToken] = useLocalStorage('token');
   const [currentUser, setCurrentUser] = useState();
+  const [applicationIDs, setApplicationIDs] = useState([]);
   
 
  useEffect(
@@ -23,7 +24,6 @@ function App() {
          let { username } = jwt.decode(token);
          JoblyApi.token = token;
          let currentUser = await JoblyApi.getUser(username);
-         console.log('CurrentUser:', currentUser);
          setCurrentUser(currentUser);
        }
      }
@@ -41,30 +41,34 @@ function App() {
   async function handleLogIn (userData) {
     const userToken = await JoblyApi.loginUser(userData);
     JoblyApi.token = userToken;
-    console.log('UserToken:', userToken)
     setToken(userToken);
     return userToken;
   };
 
   async function handleSignUp (userData) {
     const userToken = await JoblyApi.signupUser(userData);
-    console.log(userToken);
     setToken(userToken);
     return userToken;
   }
 
   async function editProfile(currentUsername, updatedData) {
     const updatedUser = await JoblyApi.editUser(currentUsername, updatedData);
-    console.log('Updated User:', updatedUser);
     setCurrentUser(updatedUser);
     return updatedUser;
+  }
+
+
+  async function apply (username, jobId) {
+    const jobAppliedTo = await JoblyApi.applyToJob(username, jobId);
+    setApplicationIDs([...applicationIDs, jobId]);
+    return jobAppliedTo;
   }
  
 
   return (
     <div className="App">
       <BrowserRouter>
-      <UserContext.Provider value={currentUser}>
+      <UserContext.Provider value={{currentUser, applicationIDs, apply}}>
         <NavBar logOut={logOut}/>
         <AppRoutes
          handleLogIn={handleLogIn}

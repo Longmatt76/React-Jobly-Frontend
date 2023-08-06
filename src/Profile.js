@@ -4,7 +4,7 @@ import UserContext from "./UserContext";
 
 const Profile = ({editProfile}) => {
 
-  const currentUser = useContext(UserContext);  
+  const {currentUser} = useContext(UserContext);  
 
   const navigate = useNavigate();
 

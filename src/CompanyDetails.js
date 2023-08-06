@@ -34,6 +34,7 @@ const CompanyDetails = () => {
               title={job.title}
               salary={job.salary}
               equity={job.equity}
+              id={job.id}
             />
           </li>
         ))}

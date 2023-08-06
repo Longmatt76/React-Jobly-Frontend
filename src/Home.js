@@ -4,7 +4,7 @@ import UserContext from './UserContext';
 import React, { useContext } from 'react';
 
 const Home = () => {
-  const currentUser = useContext(UserContext);
+  const {currentUser} = useContext(UserContext);
   return (
     <div className="home">
       <h1>Jobly</h1>

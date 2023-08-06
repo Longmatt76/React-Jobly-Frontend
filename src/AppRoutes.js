@@ -11,7 +11,7 @@ import CatchAll404 from "./CatchAll404";
 import CompanyDetails from "./CompanyDetails";
 import ProtectedRoutes from "./ProtectedRoutes";
 
-function AppRoutes({handleLogIn, handleSignUp, editProfile}) {
+function AppRoutes({handleLogIn, handleSignUp, editProfile, apply}) {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -20,7 +20,7 @@ function AppRoutes({handleLogIn, handleSignUp, editProfile}) {
       <Route element={<ProtectedRoutes/>}>
         <Route path="/companies" element={<CompanyList />} />
         <Route path="/companies/:handle" element={<CompanyDetails/>}/>
-        <Route path="/jobs" element={<JobList />} />
+        <Route path="/jobs" element={<JobList/>} />
         <Route path="/profile" element={<Profile editProfile={editProfile}/>} />
       </Route>
       <Route path="*" element={<CatchAll404/>} /> 

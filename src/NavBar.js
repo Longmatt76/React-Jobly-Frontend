@@ -7,7 +7,7 @@ import UserContext from "./UserContext";
 
 function NavBar({logOut}) {
 
-  const currentUser = useContext(UserContext)
+  const {currentUser} = useContext(UserContext)
 
   return (
     <div>
