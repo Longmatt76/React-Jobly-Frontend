@@ -21,6 +21,13 @@
     border-radius: 5px;
     border: .5px solid black;
     margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+
+.loginInput:disabled {
+    background-color: rgb(76, 89, 94);
+    color: white;
 }
 
 .loginLabel {

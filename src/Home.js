@@ -20,7 +20,7 @@ const Home = () => {
             </Link>
           </>
         ) : (
-          <h2 className='welcomeBack'>Welcome Back {currentUser.username}!</h2>
+          <h2 className='welcomeBack'>Welcome Back {currentUser.firstName}!</h2>
         )}
       </div>
     </div>

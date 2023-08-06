@@ -53,6 +53,12 @@ function App() {
     return userToken;
   }
 
+  async function editProfile(currentUsername, updatedData) {
+    const updatedUser = await JoblyApi.editUser(currentUsername, updatedData);
+    console.log('Updated User:', updatedUser);
+    setCurrentUser(updatedUser);
+    return updatedUser;
+  }
  
 
   return (
@@ -62,7 +68,8 @@ function App() {
         <NavBar logOut={logOut}/>
         <AppRoutes
          handleLogIn={handleLogIn}
-         handleSignUp={handleSignUp}/>
+         handleSignUp={handleSignUp}
+         editProfile={editProfile}/>
          </UserContext.Provider>
       </BrowserRouter>
     </div>

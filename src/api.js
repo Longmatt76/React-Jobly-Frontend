@@ -66,6 +66,11 @@ class JoblyApi {
     let res = await this.request('jobs', {title});
     return res.jobs;
   }
+
+  static async editUser(username, updatedData) {
+    let res = await this.request(`users/${username}`, updatedData, 'patch');
+    return res.user 
+  }
 }
 
 export default JoblyApi;
